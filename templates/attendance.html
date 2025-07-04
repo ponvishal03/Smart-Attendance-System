@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="attendance-container">
+        <h1>Mark Attendance</h1>
+        <form action="{{ url_for('attendance') }}" method="POST" enctype="multipart/form-data">
+            <label for="subject">Select Subject:</label>
+            <select name="subject" id="subject" required>
+                <option value="" disabled selected>Select Subject</option>
+                <option value="Maths">Maths</option>
+                <option value="Data Structure">Data Structure</option>
+                <option value="Computer Graphics">Computer Graphics</option>
+                <option value="DBMS">DBMS</option>
+                <option value="Computer Network">Computer Network</option>
+            </select>
+
+            <label for="photo">Upload Group Photo:</label>
+            <label class="custom-file-upload">
+                <input type="file" name="photo" id="photo" accept="image/*" required>
+                Choose File
+            </label>
+
+            <button type="submit">Submit Attendance</button>
+        </form>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

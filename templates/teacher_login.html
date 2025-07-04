@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Teacher Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side"></div>
+        <div class="right-side"></div>
+        <div class="login-form">
+            <h2>Smart Attendance System - Teacher Login</h2>
+            <form method="POST" action="{{ url_for('teacher_login') }}">
+                <input type="text" id="username" name="username" placeholder="Username" class="input-field" required>
+                <input type="password" id="password" name="password" placeholder="Password" class="input-field" required>
+                <button type="submit" class="btn login-btn">Login</button>
+            </form>
+
+            <!-- Flash messages for errors or feedback -->
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="flashes">
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+
+            <a href="{{ url_for('forgot_password') }}" class="forgot-password">Forgot Password?</a> <!-- Updated link -->
+            <a href="{{ url_for('index') }}" class="back-link">Back to Main Page</a>
+        </div>
+        <img src="{{ url_for('static', filename='logo.png') }}" class="top-right-logo" alt="Logo">
+    </div>
+</body>
+</html>

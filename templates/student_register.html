@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Register New Student</title>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" class="top-right-logo"> <!-- Logo added -->
+        <div class="login-form">
+            <h2>Register New Student</h2>
+            <form method="POST" action="{{ url_for('student_register') }}" enctype="multipart/form-data">
+                <input type="text" name="student_name" placeholder="Student Name" required class="input-field">
+                <input type="text" name="student_id" placeholder="Student ID" required class="input-field">
+                <input type="email" name="student_email" placeholder="Student Email" required class="input-field">
+                <input type="file" name="student_photo" accept="image/*" required class="input-field">
+                <button type="submit" class="btn">Register Student</button>
+            </form>
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class="flashes">
+                        {% for message in messages %}
+                            <li>{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+            <a href="{{ url_for('teacher_dashboard') }}" class="back-link">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

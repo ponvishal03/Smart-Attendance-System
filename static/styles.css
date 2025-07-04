@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Use a modern, clean font */
+  background-image: url('bg.png'); /* Add the background image */
+  background-size: cover; /* Make sure the background covers the entire page */
+  background-position: center;
+  background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+  backdrop-filter: blur(15px); /* Glassmorphism effect */
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  text-align: center;
+  right: -75px; /* Shift the form to the right */
+  transform: translate(-15%, -5%); /* Fine-tuning the position to stay centered vertically */
+}
+
+.login-form h2 {
+  color: white;
+  font-size: 28px;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.login-form button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  margin-top: 20px;
+  border: none;
+  background: linear-gradient(135deg, #6a8bad, #29436d); /* Gradient background */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #29436d, #6a8bad); /* Reverse gradient on hover */
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 14px;
+}
+
+.login-form input::placeholder {
+  color: #fff;
+}
+
+.login-form a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  margin-top: 20px;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+.signup-btn {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Gradient for the signup button */
+  color: #29436d;
+}
+
+.login-btn {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.top-right-logo {
+  position: absolute;
+  top: -13px;
+  right: 1px;
+  width: 170px; /* Adjust size as needed */
+}
+
+/* Attendance Page Styles */
+.attendance-container {
+  background: rgba(255, 255, 255, 0.2); /* Slightly more opaque for contrast */
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 600px; /* Adjust max-width as needed */
+  text-align: center;
+}
+
+.attendance-container h1 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.attendance-container label {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.attendance-container select,
+.attendance-container input[type="file"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000000;
+  font-size: 14px;
+}
+
+.attendance-container button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #6a8bad, #29436d);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.attendance-container button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #29436d, #6a8bad);
+}
+
+.attendance-container ul {
+  list-style-type: none;
+  padding: 0;
+  color: #fff;
+}
+
+
+
+
+
+.btn {
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #6a8bad, #29436d); /* Gradient colors */
+  color: white; /* Text color */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Font weight */
+  text-align: center; /* Center text */
+  text-decoration: none; /* No underline */
+  transition: all 0.3s ease; /* Smooth transition for effects */
+  border: none; /* Remove any default borders */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.btn:hover {
+  transform: translateY(-3px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+  background: linear-gradient(135deg, #29436d, #6a8bad); /* Reverse gradient on hover */
+}
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: white; /* Set all heading colors to white */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Optional: Add a subtle shadow for better visibility */
+}
+
+
+
+
+
+
+
+

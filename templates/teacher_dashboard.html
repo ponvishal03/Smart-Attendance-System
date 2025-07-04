@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Teacher Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="dashboard">
+            <h2 style="color: white;">Welcome, {{ session['username'] }}!</h2>
+            <p style="color: white;">Select an option below:</p>
+            <div class="button-container">
+                <a href="{{ url_for('student_register') }}" class="btn">Register New Student</a>
+                <a href="{{ url_for('attendance') }}" class="btn">Mark Attendance</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
